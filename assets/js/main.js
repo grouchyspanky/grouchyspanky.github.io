@@ -125,6 +125,14 @@
 			function(data) {
 			console.log(data);
 			}
+			var country = data.continent.name;
+				  
+			var location = data.city.name;
+			
+			$("country").append(country);
+				  
+			$("location").append(location);
+			
 			
 			);
 			
