@@ -123,11 +123,11 @@
 		// Location API.
 			$.getJSON("https://api.getgeoapi.com/v2/ip/check?api_key=45209699a21f47b2d7352b7f10f22cbd015aa68f", 
 			function(data) {
-			console.log(data.city);
+			console.log(data);
 			
-			var country = data.continent[1];
+			var country = data.continent.name;
 				  
-			var location = data.city[1];			
+			var location = data.city.name;			
 	
 			$(".country").append(country);
 				  
