@@ -129,9 +129,9 @@
 				  
 			var location = data.city.name;			
 	
-			$("country").append(country);
+			$(".country").append(country);
 				  
-			$("location").append(location);			
+			$(".location").append(location);			
 			
 			}
 
