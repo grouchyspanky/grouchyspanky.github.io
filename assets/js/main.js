@@ -121,39 +121,45 @@
 
 				});
 			//Weather API
-			$.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=34.0767&lon=-118.1802&appid=88c4f037e82db63e51c63886d11b429c",
-			function(data1) {
-			console.log(data1);
-			}
-
-
-			);
-	
-	
-	
-	
-	
-	
-			// Location API.
-			
-	
 			$.getJSON("https://api.getgeoapi.com/v2/ip/check?api_key=45209699a21f47b2d7352b7f10f22cbd015aa68f", 
 			function(data) {
 			console.log(data);
 			
+
+			var latitude = data.location.latitude;
+
+			var longitude = data.location.longitude;
+
+			$.getJSON("https://api.openweathermap.org/data/2.5/weather?lat="+ latitude +"&lon=" + longitude + "&appid=88c4f037e82db63e51c63886d11b429c&units=imperial", function(weatherdata) {
+				console.log(weatherdata);
+
+			var temp = weatherdata.main.temp;
+
+			$(".weather").append(temp, " F");
+
+
+		}
+		)
+
 			var country = data.country.name;
 				  
-			var location = data.area.name;		
+			var location = data.area.name;
+			
+			var city = data.city.name;
+
+			
 	
 			$(".country").append("Your country is ",country,"; Your state is ",location,".");
 				  
 			$(".location").append(location);			
 			
+			$(".weather").append("You're currently in ", city,"; The temperature is ");
 			}
 
 			);
 
 				
+		
 	
 		// Title Bar.
 			$titleBar = $(
