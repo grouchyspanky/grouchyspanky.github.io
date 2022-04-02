@@ -125,11 +125,11 @@
 			function(data) {
 			console.log(data);
 			
-			var country = data.continent.name;
+			var country = data.country.name;
 				  
-			var location = data.city.name;			
+			var location = data.area.name;		
 	
-			$(".country").append(country);
+			$(".country").append("Your country is ",country," Your state is ",location,".");
 				  
 			$(".location").append(location);			
 			
