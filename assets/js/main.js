@@ -121,11 +121,12 @@
 
 				});
 		// Location API.
-			$.getJSON(https://api.getgeoapi.com/v2/ip/check?api_key=45209699a21f47b2d7352b7f10f22cbd015aa68f, 
+			$.getJSON("https://api.getgeoapi.com/v2/ip/check?api_key=45209699a21f47b2d7352b7f10f22cbd015aa68f", 
 			function(data) {
 			console.log(data);
 			}
-			});
+			
+			);
 			
 	
 	
