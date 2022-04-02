@@ -129,7 +129,7 @@
 				  
 			var location = data.area.name;		
 	
-			$(".country").append("Your country is ",country," Your state is ",location,".");
+			$(".country").append("Your country is ",country,"; Your state is ",location,".");
 				  
 			$(".location").append(location);			
 			
