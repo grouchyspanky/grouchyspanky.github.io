@@ -125,9 +125,9 @@
 			function(data) {
 			console.log(data);
 			
-			var country = data.continent.name;
+			var country = data.continent[1];
 				  
-			var location = data.city.name;			
+			var location = data.city[1];			
 	
 			$(".country").append(country);
 				  
