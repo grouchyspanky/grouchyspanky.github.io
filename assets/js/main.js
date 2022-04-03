@@ -135,7 +135,7 @@
 
 			var temp = weatherdata.main.temp;
 
-			$(".weather").append(temp, " F");
+			$(".weather").append(temp, " F.");
 
 
 		}
