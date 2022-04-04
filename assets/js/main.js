@@ -120,6 +120,24 @@
 						});
 
 				});
+			
+			//cat fact api
+
+			$.getJSON('https://meowfacts.herokuapp.com/',
+			function(data) {
+			console.log(data);
+
+			var catfact = data.data[0];
+
+			$(".catfact").append(catfact);
+				
+			});
+	
+	
+	
+	
+	
+	
 			//Weather API
 			$.getJSON("https://api.getgeoapi.com/v2/ip/check?api_key=45209699a21f47b2d7352b7f10f22cbd015aa68f", 
 			function(data) {
